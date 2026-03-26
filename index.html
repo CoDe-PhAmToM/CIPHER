@@ -1,0 +1,344 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="UTF-8"/>
+<meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+<title>CIPHER — Comunidad de Programación Competitiva</title>
+<link href="https://fonts.googleapis.com/css2?family=Syne:wght@400;700;800&family=JetBrains+Mono:wght@300;400;700&family=Instrument+Serif:ital@0;1&display=swap" rel="stylesheet"/>
+<link rel="stylesheet" href="style.css"/>
+</head>
+<body>
+
+<div id="cur"></div>
+<div id="cur-ring"></div>
+<div class="blob blob-1"></div>
+<div class="blob blob-2"></div>
+
+<!-- ── NAV ── -->
+<nav>
+  <a href="#" class="nav-logo"><span class="dot"></span>CIPHER</a>
+  <ul class="nav-links">
+    <li><a href="#about">Nosotros</a></li>
+    <li><a href="#activities">Actividades</a></li>
+    <li><a href="#tracks">Niveles</a></li>
+    <li><a href="#paths">Caminos</a></li>
+    <li><a href="#join">Únete</a></li>
+  </ul>
+  <a href="#join" class="nav-join">Únete →</a>
+</nav>
+
+<!-- ── HERO ── -->
+<section class="hero" id="home">
+  <div class="hero-eyebrow">Resolución de Problemas & Programación Competitiva · UPEA · El Alto</div>
+  <h1 class="hero-title">
+    <span class="solid">CI</span><span class="hollow">PH</span><br>
+    <span class="green">ER</span>
+  </h1>
+  <p class="hero-meaning">
+    <em>cipher</em> /ˈsʌɪfə/ — Un mensaje cifrado que solo aquellos<br>
+    que dominan el algoritmo pueden resolver.
+  </p>
+  <p class="hero-desc">
+    Somos la comunidad de resolución de problemas de la UPEA.<br>
+    Analizamos. Construimos algoritmos. Competimos.<br>
+    Crecemos — cada semana, juntos.
+  </p>
+  <div class="hero-ctas">
+    <a href="#join" class="cta-main">Únete a la Comunidad →</a>
+    <a href="#about" class="cta-ghost">Saber más ↓</a>
+  </div>
+  <div class="hero-visual">
+    <svg viewBox="0 0 500 500" fill="none" xmlns="http://www.w3.org/2000/svg">
+      <circle cx="250" cy="250" r="230" stroke="rgba(22,163,74,0.1)" stroke-width="1" stroke-dasharray="3 9"
+        style="transform-origin:250px 250px;animation:tick 40s linear infinite"/>
+      <g style="transform-origin:250px 250px;animation:tick 18s linear infinite">
+        <circle cx="250" cy="250" r="175" stroke="rgba(74,222,128,0.1)" stroke-width="1"/>
+        <circle cx="250" cy="75"  r="5" fill="rgba(74,222,128,0.7)"/>
+        <circle cx="425" cy="250" r="5" fill="rgba(74,222,128,0.7)"/>
+        <circle cx="250" cy="425" r="5" fill="rgba(74,222,128,0.7)"/>
+        <circle cx="75"  cy="250" r="5" fill="rgba(74,222,128,0.7)"/>
+      </g>
+      <g style="transform-origin:250px 250px;animation:tick 10s linear infinite reverse">
+        <circle cx="250" cy="250" r="112" stroke="rgba(163,230,53,0.12)" stroke-width="1"/>
+        <circle cx="250" cy="138" r="4" fill="rgba(163,230,53,0.6)"/>
+        <circle cx="362" cy="250" r="4" fill="rgba(163,230,53,0.6)"/>
+        <circle cx="250" cy="362" r="4" fill="rgba(163,230,53,0.6)"/>
+        <circle cx="138" cy="250" r="4" fill="rgba(163,230,53,0.6)"/>
+      </g>
+      <polygon points="250,148 332,197 332,303 250,352 168,303 168,197"
+        stroke="rgba(22,163,74,0.2)" stroke-width="1" fill="rgba(22,163,74,0.03)"
+        style="transform-origin:250px 250px;animation:tick 22s linear infinite"/>
+      <circle cx="250" cy="250" r="52"
+        stroke="rgba(74,222,128,0.3)" stroke-width="1" fill="rgba(22,163,74,0.07)"
+        style="animation:bf 5s ease-in-out infinite"/>
+      <text x="250" y="244" text-anchor="middle" font-family="JetBrains Mono" font-size="13" font-weight="700" fill="rgba(74,222,128,0.95)" letter-spacing="5">CIPHER</text>
+      <text x="250" y="262" text-anchor="middle" font-family="JetBrains Mono" font-size="6.5" fill="rgba(163,230,53,0.5)" letter-spacing="3">UPEA · CP CLUB</text>
+      <circle r="6" fill="rgba(163,230,53,0.85)">
+        <animateMotion dur="7s" repeatCount="indefinite"><mpath href="#orb"/></animateMotion>
+      </circle>
+      <circle id="orb" cx="250" cy="250" r="175" fill="none"/>
+      <text x="28"  y="95"  font-family="JetBrains Mono" font-size="8.5" fill="rgba(22,163,74,0.18)"  letter-spacing="2">01001000</text>
+      <text x="375" y="145" font-family="JetBrains Mono" font-size="8.5" fill="rgba(74,222,128,0.13)" letter-spacing="2">11010110</text>
+      <text x="18"  y="370" font-family="JetBrains Mono" font-size="8.5" fill="rgba(163,230,53,0.18)" letter-spacing="2">10110100</text>
+      <text x="370" y="400" font-family="JetBrains Mono" font-size="8.5" fill="rgba(22,163,74,0.13)"  letter-spacing="2">00111001</text>
+    </svg>
+  </div>
+</section>
+
+<!-- ── TICKER ── -->
+<div class="ticker">
+  <div class="ticker-inner">
+    <span>Problem Solving</span><span class="sep">·</span>
+    <span>Algorithms</span><span class="sep">·</span>
+    <span>Data Structures</span><span class="sep">·</span>
+    <span>ICPC</span><span class="sep">·</span>
+    <span>Competitive Programming</span><span class="sep">·</span>
+    <span>Teamwork</span><span class="sep">·</span>
+    <span>Graph Theory</span><span class="sep">·</span>
+    <span>Dynamic Programming</span><span class="sep">·</span>
+    <span>Codeforces</span><span class="sep">·</span>
+    <span>UPEA · El Alto</span><span class="sep">·</span>
+    <span>Problem Solving</span><span class="sep">·</span>
+    <span>Algorithms</span><span class="sep">·</span>
+    <span>Data Structures</span><span class="sep">·</span>
+    <span>ICPC</span><span class="sep">·</span>
+    <span>Competitive Programming</span><span class="sep">·</span>
+    <span>Teamwork</span><span class="sep">·</span>
+    <span>Graph Theory</span><span class="sep">·</span>
+    <span>Dynamic Programming</span><span class="sep">·</span>
+    <span>Codeforces</span><span class="sep">·</span>
+    <span>UPEA · El Alto</span><span class="sep">·</span>
+  </div>
+</div>
+
+<!-- ── ABOUT ── -->
+<section id="about">
+  <div class="label">// 001 — Nosotros</div>
+  <h2 class="big-title reveal">Desciframos<br><span class="accent">Problemas Difíciles.</span></h2>
+  <p class="reveal section-desc" style="transition-delay:.1s">
+    CIPHER nació del primer equipo ICPC de la UPEA. Vimos que nuestra universidad no tenía una comunidad de programación — así que la construimos nosotros.
+    Abierta a todos. Impulsada por la curiosidad, los algoritmos, y la satisfacción de resolver lo que parecía imposible.
+  </p>
+  <div class="pillars reveal" style="transition-delay:.2s">
+    <div class="pillar">
+      <span class="pillar-icon">{ }</span>
+      <h3>Algorithms</h3>
+      <p>Estudiamos las estructuras y técnicas que potencian la resolución real de problemas: grafos, árboles, DP, búsqueda, optimización.</p>
+    </div>
+    <div class="pillar">
+      <span class="pillar-icon">⚡</span>
+      <h3>Competition</h3>
+      <p>Contests semanales, entrenamiento ICPC, rondas virtuales. Competimos para mejorar — cada semana, sin excusas, con o sin recursos.</p>
+    </div>
+    <div class="pillar">
+      <span class="pillar-icon">△</span>
+      <h3>Team Spirit</h3>
+      <p>Formamos equipos reales, compartimos estrategias y nos empujamos mutuamente. Solo vas rápido, juntos llegas más lejos.</p>
+    </div>
+  </div>
+</section>
+
+<!-- ── STATS ── -->
+<div class="stat-row">
+  <div class="stat-cell reveal"><span class="stat-num">3</span><span class="stat-lbl">Por equipo ICPC</span></div>
+  <div class="stat-cell reveal" style="transition-delay:.1s"><span class="stat-num">5h</span><span class="stat-lbl">Duración del Contest</span></div>
+  <div class="stat-cell reveal" style="transition-delay:.2s"><span class="stat-num">∞</span><span class="stat-lbl">Problemas por Resolver</span></div>
+  <div class="stat-cell reveal" style="transition-delay:.3s"><span class="stat-num">6</span><span class="stat-lbl">Áreas de Carrera</span></div>
+</div>
+
+<!-- ── ACTIVITIES ── -->
+<section id="activities">
+  <div class="label">// 002 — Actividades</div>
+  <h2 class="big-title reveal">Qué Hacemos</h2>
+  <div class="act-grid reveal" style="transition-delay:.15s">
+    <div class="act-card">
+      <span class="act-num">// 01</span>
+      <h3>Weekly Contests</h3>
+      <p>Rondas cronometradas cada semana en Codeforces o VJUDGE. Editorial completo + debrief post-ronda. El hábito es la clave.</p>
+    </div>
+    <div class="act-card">
+      <span class="act-num">// 02</span>
+      <h3>Algorithm Workshops</h3>
+      <p>Sesiones profundas sobre un tópico por semana: segment trees, DP, grafos, geometría. Presentados por miembros para miembros.</p>
+    </div>
+    <div class="act-card">
+      <span class="act-num">// 03</span>
+      <h3>Team Formation</h3>
+      <p>Formamos tríos balanceados para competencias. Todos tienen equipo. La dinámica de trabajo en equipo se aprende practicándola.</p>
+    </div>
+    <div class="act-card">
+      <span class="act-num">// 04</span>
+      <h3>Apoyo Académico</h3>
+      <p>Programación I/II, POO, Estructura de Datos, BD I/II — resolvemos dudas entre pares antes de que se conviertan en deudas.</p>
+    </div>
+    <div class="act-card">
+      <span class="act-num">// 05</span>
+      <h3>Study Groups</h3>
+      <p>Grupos de 3-4 personas atacando un problem set juntos. La mejor forma de aprender es explicar lo que ya sabes.</p>
+    </div>
+    <div class="act-card">
+      <span class="act-num">// 06</span>
+      <h3>UPEA Hackathon</h3>
+      <p>Nuestra competición interna abierta a toda la universidad. Sembramos la cultura de programación competitiva en la UPEA.</p>
+    </div>
+  </div>
+</section>
+
+<!-- ── TRACKS ── -->
+<section id="tracks" class="tracks-section">
+  <div class="label">// 003 — Niveles</div>
+  <h2 class="big-title reveal">Tu Nivel,<br><span class="accent">Tu Camino.</span></h2>
+  <div class="tracks-layout reveal" style="transition-delay:.15s">
+    <div class="track-nav">
+      <button class="track-btn active" onclick="sw('f',this)">01 · Fundamentos</button>
+      <button class="track-btn" onclick="sw('a',this)">02 · Algoritmos</button>
+      <button class="track-btn" onclick="sw('s',this)">03 · Nivel Avanzado</button>
+    </div>
+    <div>
+      <div class="track-panel active" id="track-f">
+        <span class="track-badge badge-f">Fundamentos</span>
+        <h3>Aprende a Programar Bien</h3>
+        <p>Si estás comenzando o quieres reforzar las bases de la carrera, este es tu punto de partida. Cubrimos exactamente lo que se lleva en Ing. Sistemas — con orientación práctica y aplicada.</p>
+        <div class="topic-grid">
+          <div class="topic">Programación I — Lógica y sintaxis</div>
+          <div class="topic">Programación II — Funciones y módulos</div>
+          <div class="topic">POO — Clases, herencia, polimorfismo</div>
+          <div class="topic">Estructura de Datos — Listas, árboles, grafos</div>
+          <div class="topic">Base de Datos I — Modelado relacional, SQL</div>
+          <div class="topic">Base de Datos II — SQL avanzado, NoSQL</div>
+        </div>
+      </div>
+      <div class="track-panel" id="track-a">
+        <span class="track-badge badge-a">Algoritmos</span>
+        <h3>Pensamiento Algorítmico</h3>
+        <p>Ya dominas la programación. Ahora entrenamos la parte más importante: cómo analizar un problema, diseñar una solución eficiente y razonar sobre su complejidad.</p>
+        <div class="topic-grid">
+          <div class="topic">Análisis de complejidad — Big O</div>
+          <div class="topic">Búsqueda y Ordenamiento avanzado</div>
+          <div class="topic">Recursión y Divide & Conquer</div>
+          <div class="topic">Programación Dinámica (DP)</div>
+          <div class="topic">Grafos — BFS, DFS, Dijkstra, Floyd</div>
+          <div class="topic">Greedy Algorithms & correctness proofs</div>
+        </div>
+      </div>
+      <div class="track-panel" id="track-s">
+        <span class="track-badge badge-s">Nivel Avanzado</span>
+        <h3>Competencia de Verdad</h3>
+        <p>Para quienes apuntan a contests serios y al ICPC. Tópicos avanzados, presión de tiempo real, análisis post-contest. Aquí se separan los que resuelven de los que solo intentan.</p>
+        <div class="topic-grid">
+          <div class="topic">Segment Trees & Fenwick Trees</div>
+          <div class="topic">DP Avanzado — Bitmask, Knapsack, SOS</div>
+          <div class="topic">Network Flow & Matching</div>
+          <div class="topic">Geometría Computacional</div>
+          <div class="topic">String Algorithms — KMP, Suffix Array</div>
+          <div class="topic">Mock Contests ICPC-style (5h, equipo)</div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ── PATHS ── -->
+<section id="paths">
+  <div class="label">// 004 — Áreas de Especialización</div>
+  <h2 class="big-title reveal">Elige tu <span class="accent">Camino.</span></h2>
+  <p class="reveal section-desc" style="transition-delay:.1s">
+    Una vez que dominas los fundamentos y el pensamiento algorítmico, CIPHER te orienta hacia el área que más te apasiona.
+    Seis caminos distintos — todos parten de saber analizar y resolver problemas.
+  </p>
+  <div class="paths-grid reveal" style="transition-delay:.2s">
+
+    <div class="path-card">
+      <span class="path-icon">🤖</span>
+      <span class="path-tag">// Área 01</span>
+      <h3>Inteligencia Artificial</h3>
+      <p>Machine learning, redes neuronales, procesamiento de datos y modelos predictivos. El área de mayor crecimiento en la industria.</p>
+      <div class="path-tools">
+        <span class="ptag">Python</span><span class="ptag">TensorFlow</span><span class="ptag">PyTorch</span><span class="ptag">Estadística</span>
+      </div>
+    </div>
+
+    <div class="path-card">
+      <span class="path-icon">🔐</span>
+      <span class="path-tag">// Área 02</span>
+      <h3>Ciberseguridad</h3>
+      <p>Auditoría de sistemas, ethical hacking, análisis de vulnerabilidades. El área más crítica y demandada del sector TIC en Bolivia.</p>
+      <div class="path-tools">
+        <span class="ptag">Kali Linux</span><span class="ptag">Redes</span><span class="ptag">Criptografía</span><span class="ptag">OWASP</span>
+      </div>
+    </div>
+
+    <div class="path-card">
+      <span class="path-icon">🌐</span>
+      <span class="path-tag">// Área 03</span>
+      <h3>Desarrollo Web</h3>
+      <p>Frontend, UX, interfaces modernas. Construir productos digitales que personas reales usan todos los días.</p>
+      <div class="path-tools">
+        <span class="ptag">HTML/CSS</span><span class="ptag">JavaScript</span><span class="ptag">React</span><span class="ptag">Next.js</span>
+      </div>
+    </div>
+
+    <div class="path-card">
+      <span class="path-icon">⚙️</span>
+      <span class="path-tag">// Área 04</span>
+      <h3>Backend</h3>
+      <p>APIs, servidores, lógica de negocio. El motor invisible detrás de toda aplicación — donde los algoritmos viven de verdad.</p>
+      <div class="path-tools">
+        <span class="ptag">Python</span><span class="ptag">Node.js</span><span class="ptag">FastAPI</span><span class="ptag">Docker</span>
+      </div>
+    </div>
+
+    <div class="path-card">
+      <span class="path-icon">☁️</span>
+      <span class="path-tag">// Área 05</span>
+      <h3>DevOps / Cloud</h3>
+      <p>Infraestructura, despliegue, automatización y cloud computing. El puente entre desarrollo y producción — muy escaso y muy demandado en Bolivia.</p>
+      <div class="path-tools">
+        <span class="ptag">Docker</span><span class="ptag">CI/CD</span><span class="ptag">AWS/GCP</span><span class="ptag">Linux</span>
+      </div>
+    </div>
+
+    <div class="path-card">
+      <span class="path-icon">📊</span>
+      <span class="path-tag">// Área 06</span>
+      <h3>Data Science</h3>
+      <p>Análisis de datos, visualización y estadística aplicada. Transformar números en decisiones — relevante para empresas, gobierno e investigación.</p>
+      <div class="path-tools">
+        <span class="ptag">Python</span><span class="ptag">Pandas</span><span class="ptag">SQL</span><span class="ptag">Power BI</span>
+      </div>
+    </div>
+
+  </div>
+</section>
+
+<!-- ── JOIN ── -->
+<section class="join-section" id="join">
+  <div class="label" style="justify-content:center">// 005 — Únete</div>
+  <h2 class="big-title">Rompe el<br>Cifrado.</h2>
+  <p class="join-sub">
+    Sin formulario. Sin requisitos previos.<br>
+    Únete al grupo, preséntate, y llega a la próxima sesión.<br>
+    El único filtro son las ganas.
+  </p>
+  <div class="join-btns">
+    <!-- <a href="#" class="btn-tg">
+      <svg width="15" height="15" viewBox="0 0 24 24" fill="currentColor"><path d="M12 0C5.373 0 0 5.373 0 12s5.373 12 12 12 12-5.373 12-12S18.627 0 12 0zm5.562 8.248l-2.032 9.566c-.148.658-.537.818-1.084.508l-3-2.21-1.447 1.394c-.16.16-.295.295-.605.295l.213-3.053 5.56-5.023c.242-.213-.054-.333-.373-.12l-6.871 4.326-2.962-.924c-.643-.204-.657-.643.136-.953l11.57-4.461c.537-.194 1.006.131.895.655z"/></svg>
+      Únete en Telegram
+    </a> -->
+    <a href="https://chat.whatsapp.com/BvZCgVYfR6aAK3OOGWiPiY" class="btn-wa" target="_blank">
+      <svg width="15" height="15" viewBox="0 0 24 24" fill="currentColor"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z"/></svg>
+      Únete en WhatsApp
+    </a>
+  </div>
+</section>
+
+<!-- ── FOOTER ── -->
+<footer>
+  <div class="foot-logo">CIPHER</div>
+  <div class="foot-tagline">Todo problema es un código esperando ser resuelto.</div>
+  <div class="foot-copy">© 2026 CIPHER · UPEA · El Alto, Bolivia</div>
+</footer>
+
+<script src="main.js"></script>
+</body>
+</html>
